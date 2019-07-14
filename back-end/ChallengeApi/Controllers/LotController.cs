@@ -26,7 +26,7 @@ namespace ChallengeApi.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}:length(24)")]
+        [HttpGet("{id:length(24)}")]
         public ActionResult<string> GetLot(int id)
         {
             throw new NotImplementedException("Need to implement get method for a Lot.");
