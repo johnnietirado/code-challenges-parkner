@@ -49,9 +49,41 @@ Si has implementado correctamente los metodos las siguientes URL te regresaran v
 
 ¡Con esto terminas la parte uno 🤓!
 
-## Parte Dos
+## Parte Dos 💻
 
-## Parte Tres
+Ahora crearas tu propio **Controller**, **Service** y **Repository**.
+
+Crea un Controller que tenga los siguientes metodos:
+
+1. `Get`
+2. `GetSession`
+3. `GetRevenueByMonth` (Se usara en la parte tres)
+  - ruta: `report`
+4. `GetSessionReportForLot` (Se usara en la parte tres)
+  - ruta: `report/{lotId}`
+
+Deberia de ser bastante obvio basado en la parte uno que el `Get` method obtiene todas las sesiones y el `GetSession` solo obtien UNA sesión.
+
+**IMPORTANTE**
+
+El nombre del COLLECTION es **sessions**
+
+Una vez que hayas implementado lo de arriba deberian de funcionar los siguientes URL:
+
+1. [https://localhost:5001/api/sessions](https://localhost:5001/api/sessions/5d2a65851c9d440000bbf57b)
+2. [https://localhost:5001/api/sessions/5d2a65851c9d440000bbf57b](https://localhost:5001/api/sessions/5d2a65851c9d440000bbf57b)
+
+Si pudiste visualizar las sesiones has completado la segunda parte. 🙌🏼
+
+## Parte Tres 📐
+
+La última parte del reto va a poner a prueba tus habilidades de MongoDB.
+
+1 - Primero filtremos las sesiones. 
+
+Deberiamos poder pasar query parameters a `/sessions` para obtener sesiones que estan activas. Al pasar el query paramater `active=true` deberia de regresar 3 sesiones. **Una sesión esta activa cuando no tiene una fecha final**.
+
+
 
 ## Parte Cuatro - OPCIONAL
 
