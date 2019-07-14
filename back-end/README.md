@@ -1,6 +1,6 @@
 # Parkner Back End Challenge
 
-[Instrucciones para instalar y correr código](#instrucciones)
+[Instrucciones para instalar y correr código](#Instrucciones-para-correr-proyecto)
 
 Este reto tiene 3 partes y una opcional:
 
