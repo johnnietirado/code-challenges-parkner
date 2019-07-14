@@ -21,14 +21,12 @@ namespace ChallengeApi.Repositories
 
         public List<User> GetUsers()
         {
-            return _users.Find(Builders<User>.Filter.Empty).ToList();
+            return _users.Find(user => true).ToList();
         }
 
         public User GetUser(string id)
         {
-            throw new System.NotImplementedException();
+            return _users.Find(user => user.Id == id).FirstOrDefault();
         }
-
-
     }
 }

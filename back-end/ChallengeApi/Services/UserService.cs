@@ -26,7 +26,5 @@ namespace ChallengeApi.Services
         {
             throw new System.NotImplementedException();
         }
-
-
     }
 }
