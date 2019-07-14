@@ -33,8 +33,10 @@ namespace ChallengeApi
             services.AddSingleton<IRepository, Repository>();
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<ILotRepository, LotRepository>();
+            services.AddSingleton<ISessionRepository, SessionRepository>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ILotService, LotService>();
+            services.AddTransient<ISessionService, SessionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
