@@ -24,7 +24,7 @@ namespace ChallengeApi.Services
 
         public User GetUser(string id)
         {
-            throw new System.NotImplementedException();
+            return _users.GetUser(id);
         }
     }
 }

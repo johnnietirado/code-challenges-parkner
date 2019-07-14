@@ -27,7 +27,7 @@ namespace ChallengeApi.Repositories
 
         public Lot GetLot(string id)
         {
-            throw new NotImplementedException("Implement GetLot method");
+            return _lots.Find(lot => lot.Id == id).FirstOrDefault();
         }
     }
 }
