@@ -72,7 +72,7 @@ El nombre del COLLECTION es **sessions**
 
 Una vez que hayas implementado lo de arriba deberían de funcionar los siguientes URL:
 
-1. [https://localhost:5001/api/sessions](https://localhost:5001/api/sessions/5d2a65851c9d440000bbf57b)
+1. [https://localhost:5001/api/sessions](https://localhost:5001/api/sessions)
 2. [https://localhost:5001/api/sessions/5d2a65851c9d440000bbf57b](https://localhost:5001/api/sessions/5d2a65851c9d440000bbf57b)
 
 Si pudiste visualizar las sesiones has completado la segunda parte. 🙌🏼
@@ -130,7 +130,7 @@ Una vez termines todas las partes **mandar el código en formato .ZIP** a [johnn
 3. Clonar repositorio `git clone git@github.com:johnnietirado/code-challenges-parkner.git`
 4. Abrir proyecto en VSCode
 5. OmniSharp te dira que el proyecto no esta formateado correctamente, deja que OmniSharp lo arregle.
-6. Aprieta `ctrl + f5` para correr el API.
+6. Aprieta `f5` o `ctrl+f5` para correr el API.
 
 [Aqui estan las instruciones de Microsoft para instalar y correr un web api](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-2.2&tabs=visual-studio-code)
 
