@@ -31,14 +31,7 @@ namespace ChallengeApi.Services
 
         public List<SessionReportDto> GetReport(string lotId = null)
         {
-            var filter = MongoDB.Driver.Builders<Session>.Filter.Empty;
-            if (!string.IsNullOrEmpty(lotId))
-            {
-                filter &= MongoDB.Driver.Builders<Session>.Filter.Eq(s => s.LotId, lotId);
-            }
-
-            var query = from s in _sessions.AsQueryable()
-                        group 
+            return _sessions.GetReport(lotId);
         }
     }
 }

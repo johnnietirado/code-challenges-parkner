@@ -7,6 +7,8 @@ namespace ChallengeApi.Models
 
     public class SessionReportDto
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string Date { get; set; }
         public double Total { get; set; }
         public double Cut { get; set; }
