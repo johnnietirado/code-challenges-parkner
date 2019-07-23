@@ -12,8 +12,8 @@ class Index extends React.Component<any, any> {
                 <Head>
                     <title>Parkner</title>
                 </Head>
-                <h1>To-do</h1>
-                <h2><a href="">Instrucciones</a></h2>
+                <h1>Pendientes</h1>
+                <h2><a href="https://github.com/johnnietirado/code-challenges-parkner/tree/solution/front-end" target="_blank">Instrucciones</a></h2>
                 <div>¡Usa tu creatividad y muestrame que tan bonito puedes hacer una lista de pendientes!</div>
             </React.Fragment>
         )
