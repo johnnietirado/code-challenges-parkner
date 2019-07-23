@@ -4,6 +4,13 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace ChallengeApi.Models
 {
+
+    public class SessionReportDto
+    {
+        public string Date { get; set; }
+        public double Total { get; set; }
+        public double Cut { get; set; }
+    }
     public class Money
     {
         public double Total { get; set; }

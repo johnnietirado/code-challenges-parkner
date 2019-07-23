@@ -26,24 +26,24 @@ namespace ChallengeApi.Controllers
         }
 
         [HttpGet("report")]
-        public ActionResult<string> GetRevenueByMonth(string id)
+        public ActionResult GetRevenueByMonth()
         {
-            var session = _sessionService.GetSession(id);
-            if (session == null) return NotFound();
-            return Ok(session);
+            return Ok(_sessionService.GetReport());
         }
 
         [HttpGet("report/{lotId}")]
-        public ActionResult<string> GetSessionReportForLot(string lotId)
+        public ActionResult GetSessionReportForLot(string lotId)
         {
             return Ok();
         }
 
         // GET api/values/5
         [HttpGet("{id:length(24)}")]
-        public ActionResult<string> GetSession(string id)
+        public ActionResult GetSession(string id)
         {
-            return Ok();
+            var session = _sessionService.GetSession(id);
+            if (session == null) return NotFound();
+            return Ok(session);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using ChallengeApi.Models;
 using ChallengeApi.Repositories;
+using MongoDB.Driver.Linq;
 
 namespace ChallengeApi.Services
 {
@@ -9,6 +10,7 @@ namespace ChallengeApi.Services
     {
         List<Session> GetSessions(bool? active);
         Session GetSession(string id);
+        List<SessionReportDto> GetReport(string lotId = null);
     }
 
     public class SessionService : ISessionService
@@ -25,6 +27,18 @@ namespace ChallengeApi.Services
         public Session GetSession(string id)
         {
             return _sessions.GetSession(id);
+        }
+
+        public List<SessionReportDto> GetReport(string lotId = null)
+        {
+            var filter = MongoDB.Driver.Builders<Session>.Filter.Empty;
+            if (!string.IsNullOrEmpty(lotId))
+            {
+                filter &= MongoDB.Driver.Builders<Session>.Filter.Eq(s => s.LotId, lotId);
+            }
+
+            var query = from s in _sessions.AsQueryable()
+                        group 
         }
     }
 }
